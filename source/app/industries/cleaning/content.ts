@@ -6,9 +6,9 @@ import type { Visual } from "@/components/funnel";
 // visitor's plan interest to the team. Kept outside the client component so
 // the route's server file can feed the same FAQ and plan data into JSON-LD.
 
-export const BOOK_CALL_HREF = "#book";
+export const BOOK_CALL_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const BOOK_CALL_LABEL = "Book a 15-minute call";
-export const FREE_PLAN_HREF = "#book";
+export const FREE_PLAN_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const FREE_PLAN_LABEL = "Start on the free plan";
 
 export type Plan = {
@@ -36,7 +36,7 @@ export const CLEANING_PLANS: Plan[] = [
     price: 97,
     desc: "The operational core: client list, quote and booking links, appointment reminders, missed-call text-back and review requests. Social content isn't included.",
     cta: "Start on Starter",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6aa151dcceb12d9fc1a8be97",
   },
   {
     key: "growth",
@@ -44,7 +44,7 @@ export const CLEANING_PLANS: Plan[] = [
     price: 197,
     desc: "Everything in Starter, plus email campaigns, seasonal offer pages, a social content calendar you post from, and documents and e-signatures for quotes and service agreements.",
     cta: "Start on Growth",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6ab11e5a9f7ff2c808a76b6c",
     popular: true,
   },
   {

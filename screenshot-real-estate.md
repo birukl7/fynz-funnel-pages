@@ -34,6 +34,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/hero.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/hero.jpg"` on `hero` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 2. `textback` · Step 1 (The Leads)
@@ -46,6 +47,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/textback.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/textback.jpg"` on `textback` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 3. `dashboard` · Step 1 (The Leads)
@@ -58,6 +60,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/dashboard.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/dashboard.jpg"` on `dashboard` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 4. `messages` · Step 3 (What Runs on Its Own)
@@ -70,6 +73,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/messages.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/messages.jpg"` on `messages` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 5. `referral` · Step 4 (Referral Fees)
@@ -82,6 +86,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/referral.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/referral.jpg"` on `referral` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 6. `content` · Step 5 (Being Seen - Listings)
@@ -94,6 +99,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/content.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/content.jpg"` on `content` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 7. `openhouse` · Step 5 (Being Seen - Open Houses)
@@ -106,6 +112,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/openhouse.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/openhouse.jpg"` on `openhouse` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 8. `reviews` · Step 5 (Being Seen - Reviews)
@@ -118,6 +125,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/reviews.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/reviews.jpg"` on `reviews` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 9. `proof` · Step 6 (Proof)
@@ -130,6 +138,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/proof.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/proof.jpg"` on `proof` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### 10. `stack` · Step 8 (Tool Stack & First 90 Days)
@@ -142,6 +151,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 - **Save Path**: `/public/industries/real-estate/stack.jpg`
 - **Configuration**: Set `src: "/industries/real-estate/stack.jpg"` on `stack` in `source/app/industries/real-estate/content.ts`
 
+checked
 ---
 
 ### Bonus: Case Study Brief · Step 6 (Proof)
