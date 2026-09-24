@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { StaggerGroup, HoverFloat } from "@/components/animations";
-import { DemoForm } from "@/components/shared";
+import { FynzFormEmbed } from "@/components/shared";
 import {
   Accordion,
   AccordionItem,
@@ -31,7 +31,6 @@ import {
   BOOK_CALL_LABEL,
   FREE_PLAN_HREF,
   FREE_PLAN_LABEL,
-  INTEREST_OPTIONS,
   PLAN_TABLE,
   REAL_ESTATE_FAQS,
   REAL_ESTATE_PLANS,
@@ -300,9 +299,7 @@ export function RealEstateLanding() {
 }
 
 function RealEstateBody() {
-  const { interest, setInterest } = useFunnel();
-  const submitLabel =
-    interest === "free" ? "Set me up on the free plan" : interest === "call" ? "Book my 15-minute call" : "Talk to me about this plan";
+  const { setInterest } = useFunnel();
   return (
     <>
       {/* 1. Hook */}
@@ -703,23 +700,8 @@ function RealEstateBody() {
               We&apos;ll walk through your missed calls, your referral fees and how many past clients haven&apos;t heard from you, on your numbers. No pitch deck.
             </p>
           </div>
-          <div className="bg-navy-900 text-white rounded-[var(--r-lg)] p-6 md:p-10">
-            <DemoForm
-              submitLabel={submitLabel}
-              successHeadline={<>We&apos;ll be in touch within <span className="text-copper">one business day</span>.</>}
-              successBody={(email) => (
-                <>
-                  A human from our team will email {email || "you"} to{" "}
-                  {interest === "free" ? "switch on your free plan" : interest === "call" ? "set up your 15-minute call" : "get you started on the plan you picked"}.
-                </>
-              )}
-              phonePlaceholder="Your cell number (for the missed-call count)"
-              interestOptions={INTEREST_OPTIONS}
-              interest={interest}
-              onInterestChange={setInterest}
-              extra={{ source: "real-estate-funnel" }}
-              legalInNewTab
-            />
+          <div className="bg-navy-900 text-white rounded-[var(--r-lg)] p-4 sm:p-6 md:p-8">
+            <FynzFormEmbed />
           </div>
           <p className="text-sm text-muted text-center mt-8 leading-relaxed">
             Rather see your own numbers first? Pick <b>the free plan</b> above. It counts the calls you&apos;re already missing. It costs nothing and it is not a trial.

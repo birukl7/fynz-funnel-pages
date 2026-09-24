@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { StaggerGroup, HoverFloat } from "@/components/animations";
-import { DemoForm } from "@/components/shared";
+import { FynzFormEmbed } from "@/components/shared";
 import {
   Accordion,
   AccordionItem,
@@ -33,7 +33,6 @@ import {
   CLEANING_PLANS,
   FREE_PLAN_HREF,
   FREE_PLAN_LABEL,
-  INTEREST_OPTIONS,
   PLAN_TABLE,
   VISUALS,
 } from "./content";
@@ -285,9 +284,7 @@ export function CleaningLanding() {
 }
 
 function CleaningBody() {
-  const { interest, setInterest } = useFunnel();
-  const submitLabel =
-    interest === "free" ? "Set me up on the free plan" : interest === "call" ? "Book my 15-minute call" : "Talk to me about this plan";
+  const { setInterest } = useFunnel();
   return (
     <>
       {/* 1. Hook */}
@@ -672,23 +669,8 @@ function CleaningBody() {
               We&apos;ll walk through your missed calls, your lead fees and how many recurring clients have gone quiet, on your numbers. No pitch deck.
             </p>
           </div>
-          <div className="bg-navy-900 text-white rounded-[var(--r-lg)] p-6 md:p-10">
-            <DemoForm
-              submitLabel={submitLabel}
-              successHeadline={<>We&apos;ll be in touch within <span className="text-copper">one business day</span>.</>}
-              successBody={(email) => (
-                <>
-                  A human from our team will email {email || "you"} to{" "}
-                  {interest === "free" ? "switch on your free plan" : interest === "call" ? "set up your 15-minute call" : "get you started on the plan you picked"}.
-                </>
-              )}
-              phonePlaceholder="Your business line (for the missed-call count)"
-              interestOptions={INTEREST_OPTIONS}
-              interest={interest}
-              onInterestChange={setInterest}
-              extra={{ source: "cleaning-funnel" }}
-              legalInNewTab
-            />
+          <div className="bg-navy-900 text-white rounded-[var(--r-lg)] p-4 sm:p-6 md:p-8">
+            <FynzFormEmbed />
           </div>
           <p className="text-sm text-muted text-center mt-8 leading-relaxed">
             Rather see your own numbers first? Pick <b>the free plan</b> above. It counts the calls you&apos;re already missing. It costs nothing and it is not a trial.
