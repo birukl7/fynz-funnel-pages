@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fynz Industry Funnels — Preview Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #0f172a;
+      --card-hover: #162038;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(217, 119, 54, 0.5);
+      --copper: #e07a38;
+      --copper-glow: rgba(224, 122, 56, 0.25);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradient */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(224, 122, 56, 0.15) 0%, rgba(9, 13, 22, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      background: rgba(9, 13, 22, 0.8);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand img {
+      height: 32px;
+      width: auto;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+    }
+
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 10px;
+      background: rgba(224, 122, 56, 0.12);
+      border: 1px solid rgba(224, 122, 56, 0.3);
+      color: var(--copper);
+      border-radius: 9999px;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 4rem;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--copper);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 span {
+      color: var(--copper);
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--copper), transparent);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 24px var(--copper-glow);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: rgba(224, 122, 56, 0.1);
+      border: 1px solid rgba(224, 122, 56, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .card-route {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 1.75rem;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .features-list li {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .features-list li::before {
+      content: '✓';
+      color: var(--copper);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(224, 122, 56, 0.12);
+      border: 1px solid rgba(224, 122, 56, 0.3);
+      color: var(--copper);
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover .btn-launch {
+      background: var(--copper);
+      color: #fff;
+      border-color: var(--copper);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-faint);
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: var(--copper);
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="brand">
+      <img src="logo-fynz.png" alt="Fynz Logo">
+      <span class="brand-name">FYNZ</span>
+    </a>
+    <span class="badge">Sales Funnel Pages</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-eyebrow">Industry-Specific Funnels</span>
+      <h1>Choose a <span>funnel page</span> to preview</h1>
+      <p>
+        These are the three standalone high-converting industry funnel pages built for Fynz. Click any page to open its full interactive experience.
+      </p>
+    </section>
+
+    <div class="cards-grid">
+      <!-- Cleaning Companies -->
+      <a href="/cleaning" class="card">
+        <div>
+          <div class="card-top">
+            <div class="icon-box">🧹</div>
+            <span class="card-route">/cleaning</span>
+          </div>
+          <h2>Cleaning Companies</h2>
+          <p>
+            The follow-up system for residential & commercial cleaning services. Covers missed calls, recurring client reminders, and review generation.
+          </p>
+          <ul class="features-list">
+            <li>Interactive Missed Calls ROI Calculator</li>
+            <li>Automatic 3-message booking thread</li>
+            <li>Free, Starter, Growth & Managed pricing</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          <span>Open Cleaning Funnel</span>
+          <span>→</span>
+        </div>
+      </a>
+
+      <!-- Real Estate -->
+      <a href="/real-estate" class="card">
+        <div>
+          <div class="card-top">
+            <div class="icon-box">🏡</div>
+            <span class="card-route">/real-estate &middot; /real-state</span>
+          </div>
+          <h2>Real Estate (Canada)</h2>
+          <p>
+            Tailored for Canadian realtors & brokerages. Covers fast lead replies during showings, past client closing anniversaries, and listing promotion.
+          </p>
+          <ul class="features-list">
+            <li>Weekend missed calls commission loss calculator</li>
+            <li>CASL-compliant client check-in automations</li>
+            <li>Referral fee comparison ($3k saved per deal)</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          <span>Open Real Estate Funnel</span>
+          <span>→</span>
+        </div>
+      </a>
+
+      <!-- Restaurants -->
+      <a href="/restaurants" class="card">
+        <div>
+          <div class="card-top">
+            <div class="icon-box">🍽️</div>
+            <span class="card-route">/restaurants &middot; /restaurant</span>
+          </div>
+          <h2>Restaurants & Dining</h2>
+          <p>
+            The retention and guest recovery system for dining establishments. Brings lapsed guests back and fills slow weeknights without discounts.
+          </p>
+          <ul class="features-list">
+            <li>Lapsed regulars revenue calculator</li>
+            <li>Private feedback & review redirect flow</li>
+            <li>Event & slow-night reservation booster</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          <span>Open Restaurants Funnel</span>
+          <span>→</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="footer-note">
+      Source branch: <code>claude/sweet-galileo-8ms6zw</code> · To run the full corporate portal and all pages, visit the main <code>fynz.io</code> app.
+    </div>
+  </main>
+</body>
+</html>

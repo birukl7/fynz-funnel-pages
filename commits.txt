@@ -1,0 +1,11 @@
+d180959 Add a cleaning-company funnel on the shared funnel module
+49cf5fb Final review fixes for the funnel pages
+df14509 Real estate funnel: umbrella hero, leads first
+0e10259 Let visual placeholders grow past their aspect ratio
+5624122 Add a real estate funnel for agents in Canada on a shared funnel module
+b304d70 Reserve visual slots for each tool in action, with a brief per image
+e0ca954 Hide site chrome by page marker too, and drop the funnel's grid backdrop
+92e31ad Keep the restaurant funnel on one page: anchor-only menu, no exits
+5b4ee8e Turn the restaurant page into a single-goal funnel
+db4c122 Say what the 60-day win-back clock actually measures
+b22b944 Rebuild the restaurant industry page around regulars, plan clarity and sourced figures

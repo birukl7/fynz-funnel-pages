@@ -1,0 +1,64 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": "static-preview",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/real-state",
+      "destination": "/real-estate",
+      "permanent": false
+    },
+    {
+      "source": "/restaurant",
+      "destination": "/restaurants",
+      "permanent": false
+    },
+    {
+      "source": "/resturant",
+      "destination": "/restaurants",
+      "permanent": false
+    },
+    {
+      "source": "/industries/cleaning",
+      "destination": "/cleaning",
+      "permanent": false
+    },
+    {
+      "source": "/industries/real-estate",
+      "destination": "/real-estate",
+      "permanent": false
+    },
+    {
+      "source": "/industries/restaurants",
+      "destination": "/restaurants",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/cleaning/next-assets/:path*",
+      "destination": "/next-assets/:path*"
+    },
+    {
+      "source": "/real-estate/next-assets/:path*",
+      "destination": "/next-assets/:path*"
+    },
+    {
+      "source": "/restaurants/next-assets/:path*",
+      "destination": "/next-assets/:path*"
+    },
+    {
+      "source": "/cleaning/industries/:path*",
+      "destination": "/industries/:path*"
+    },
+    {
+      "source": "/real-estate/industries/:path*",
+      "destination": "/industries/:path*"
+    },
+    {
+      "source": "/restaurants/industries/:path*",
+      "destination": "/industries/:path*"
+    }
+  ]
+}
