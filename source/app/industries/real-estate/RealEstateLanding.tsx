@@ -586,7 +586,7 @@ function RealEstateBody() {
           </div>
         </div>
 
-        <StaggerGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <StaggerGroup id="plans" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch scroll-mt-24">
           {REAL_ESTATE_PLANS.map((plan) => (
             <div
               key={plan.key}

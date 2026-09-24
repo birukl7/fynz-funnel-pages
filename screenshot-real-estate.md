@@ -15,7 +15,7 @@ This manual documents every visual placeholder and screenshot brief across the *
 | 5 | `referral` | Screenshot | A referral arriving from a past client | Portrait (`4:5`) | `/public/industries/real-estate/referral.jpg` |
 | 6 | `content` | Before / after | Listing photos becoming a week of posts | Wide (`16:9`) | `/public/industries/real-estate/content.jpg` |
 | 7 | `openhouse` | Photo | QR sign-in at the open house | Photo (`3:2`) | `/public/industries/real-estate/openhouse.jpg` |
-| 8 | `reviews` | Screenshot | The review request, and the review it produced | Wide (`16:9`) | `/public/industries/real-estate/reviews.jpg` |
+| 8 | `reviews` | Screenshot | The review request, and the review it produced | Wide (`16:9`) | `/public/industries/real-estate/review.png` |
 | 9 | `proof` | Screenshot | An agent already on Fynz: their Google reviews or Instagram grid | Square (`1:1`) | `/public/industries/real-estate/proof.jpg` |
 | 10 | `stack` | Logo strip | The tools it sits alongside | Strip (`5:1`) | `/public/industries/real-estate/stack.jpg` |
 | — | *(Case Study)* | Text / Brief | One agent, one brokerage, one city | Card | Inline in `RealEstateLanding.tsx` |
@@ -122,8 +122,8 @@ checked
 - **Manual / Sourcing Brief**:
   > Left: the one-line review request on the client's phone, sent the week after closing, with the Google link. Right: the resulting five-star Google review on the agent's profile, with the reviewer's name and photo blurred. Same agent on both sides. Landscape.
 - **Alt Text**: `"A review request text beside the Google review it led to"`
-- **Save Path**: `/public/industries/real-estate/reviews.jpg`
-- **Configuration**: Set `src: "/industries/real-estate/reviews.jpg"` on `reviews` in `source/app/industries/real-estate/content.ts`
+- **Save Path**: `/public/industries/real-estate/review.png`
+- **Configuration**: Set `src: "/industries/real-estate/review.png"` on `reviews` in `source/app/industries/real-estate/content.ts`
 
 checked
 ---

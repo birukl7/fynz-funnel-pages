@@ -9,7 +9,7 @@ import type { Visual } from "@/components/funnel";
 
 export const BOOK_CALL_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const BOOK_CALL_LABEL = "Book a 15-minute call";
-export const FREE_PLAN_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
+export const FREE_PLAN_HREF = "#plans";
 export const FREE_PLAN_LABEL = "Start on the free plan";
 
 export type Plan = {
@@ -29,7 +29,7 @@ export const RESTAURANT_PLANS: Plan[] = [
     price: 0,
     desc: "Counts the calls you're already missing and the regulars who have gone quiet. No card, no expiry, not a trial.",
     cta: FREE_PLAN_LABEL,
-    href: FREE_PLAN_HREF,
+    href: "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd",
   },
   {
     key: "starter",

@@ -141,7 +141,7 @@ export function FreeButton({ className, onDark = false }: { className?: string; 
       size="lg"
       variant="outline"
       className={cn(onDark && "border-white/20 text-white hover:bg-white/10", className)}
-      render={<a href={config.freeHref} target="_blank" rel="noopener noreferrer" onClick={() => setInterest("free")} />}
+      render={<a href={config.freeHref} onClick={() => setInterest("free")} />}
     >
       {config.freeLabel}
     </Button>
