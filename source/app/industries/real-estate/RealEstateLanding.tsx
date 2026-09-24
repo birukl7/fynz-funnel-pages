@@ -617,7 +617,7 @@ function RealEstateBody() {
                   "w-full mt-6 py-6 font-semibold",
                   plan.popular ? "bg-copper hover:bg-copper/90 text-white" : "bg-white text-navy-900 hover:bg-slate-100 border-none"
                 )}
-                render={<a href={plan.href} onClick={() => setInterest(plan.key)} />}
+                render={<a href={plan.href} target="_blank" rel="noopener noreferrer" onClick={() => setInterest(plan.key)} />}
               >
                 {plan.cta}
               </Button>

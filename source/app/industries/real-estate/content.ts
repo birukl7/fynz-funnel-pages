@@ -6,9 +6,9 @@ import type { Visual } from "@/components/funnel";
 // team. Kept outside the client component so the route's server file can feed
 // the same FAQ and plan data into the page's JSON-LD.
 
-export const BOOK_CALL_HREF = "#book";
+export const BOOK_CALL_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const BOOK_CALL_LABEL = "Book a 15-minute call";
-export const FREE_PLAN_HREF = "#book";
+export const FREE_PLAN_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const FREE_PLAN_LABEL = "Start on the free plan";
 
 export type Plan = {
@@ -36,7 +36,7 @@ export const REAL_ESTATE_PLANS: Plan[] = [
     price: 97,
     desc: "The operational core: client database, showing and consult booking links, missed-call text-back, instant replies to portal inquiries and review requests. Social content isn't included.",
     cta: "Start on Starter",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6ab2399f9f7ff2c808a76f28",
   },
   {
     key: "growth",
@@ -44,7 +44,7 @@ export const REAL_ESTATE_PLANS: Plan[] = [
     price: 197,
     desc: "Everything in Starter, plus email campaigns, listing pages, a social content calendar you post from, and documents and e-signatures for your own paperwork.",
     cta: "Start on Growth",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6ab239abf426560dbc2f19ee",
     popular: true,
   },
   {
@@ -128,6 +128,7 @@ export const INTEREST_OPTIONS: { value: string; label: string }[] = [
 
 export const VISUALS = {
   hero: {
+    src: "/industries/real-estate/hero.png",
     kind: "Photo",
     title: "An agent mid-showing, phone face-down on the counter",
     brief:
@@ -136,6 +137,7 @@ export const VISUALS = {
     aspect: "portrait",
   },
   messages: {
+    src: "/industries/real-estate/messages.png",
     kind: "Screenshot",
     title: "The three automatic messages, as the client sees them",
     brief:
@@ -144,6 +146,7 @@ export const VISUALS = {
     aspect: "phone",
   },
   textback: {
+    src: "/industries/real-estate/textback.png",
     kind: "Screenshot",
     title: "A missed call during a showing becoming a booked viewing",
     brief:
@@ -152,6 +155,7 @@ export const VISUALS = {
     aspect: "phone",
   },
   dashboard: {
+    src: "/industries/real-estate/dashboard.png",
     kind: "Screenshot",
     title: "The free plan's missed-call counter",
     brief:
@@ -160,6 +164,7 @@ export const VISUALS = {
     aspect: "wide",
   },
   referral: {
+    src: "/industries/real-estate/referral.png",
     kind: "Screenshot",
     title: "A referral arriving from a past client",
     brief:
@@ -168,6 +173,7 @@ export const VISUALS = {
     aspect: "portrait",
   },
   content: {
+    src: "/industries/real-estate/content.png",
     kind: "Before / after",
     title: "Listing photos becoming a week of posts",
     brief:
@@ -176,6 +182,7 @@ export const VISUALS = {
     aspect: "wide",
   },
   openhouse: {
+    src: "/industries/real-estate/openhouse.png",
     kind: "Photo",
     title: "QR sign-in at the open house",
     brief:
@@ -184,6 +191,7 @@ export const VISUALS = {
     aspect: "photo",
   },
   reviews: {
+    src: "/industries/real-estate/reviews.png",
     kind: "Screenshot",
     title: "The review request, and the review it produced",
     brief:
@@ -192,6 +200,7 @@ export const VISUALS = {
     aspect: "wide",
   },
   proof: {
+    src: "/industries/real-estate/proof.png",
     kind: "Screenshot",
     title: "An agent already on Fynz: their Google reviews or Instagram grid",
     brief:
@@ -200,6 +209,7 @@ export const VISUALS = {
     aspect: "square",
   },
   stack: {
+    src: "/industries/real-estate/stack.png",
     kind: "Logo strip",
     title: "The tools it sits alongside",
     brief:

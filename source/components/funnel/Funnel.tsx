@@ -127,7 +127,7 @@ export function CallButton({ className, size = "lg" }: { className?: string; siz
     <Button
       size={size}
       className={cn("bg-copper hover:bg-copper/90 text-white font-semibold", className)}
-      render={<a href={config.bookHref} onClick={() => setInterest("call")} />}
+      render={<a href={config.bookHref} target="_blank" rel="noopener noreferrer" onClick={() => setInterest("call")} />}
     >
       {config.bookLabel}
     </Button>
@@ -141,7 +141,7 @@ export function FreeButton({ className, onDark = false }: { className?: string; 
       size="lg"
       variant="outline"
       className={cn(onDark && "border-white/20 text-white hover:bg-white/10", className)}
-      render={<a href={config.freeHref} onClick={() => setInterest("free")} />}
+      render={<a href={config.freeHref} target="_blank" rel="noopener noreferrer" onClick={() => setInterest("free")} />}
     >
       {config.freeLabel}
     </Button>
@@ -276,7 +276,7 @@ function FunnelHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <CallButton size="default" className="hidden md:inline-flex" />
-          <Button size="default" className="md:hidden bg-copper hover:bg-copper/90 text-white font-semibold" render={<a href={config.bookHref} />}>
+          <Button size="default" className="md:hidden bg-copper hover:bg-copper/90 text-white font-semibold" render={<a href={config.bookHref} target="_blank" rel="noopener noreferrer" />}>
             {config.bookShortLabel}
           </Button>
           <button

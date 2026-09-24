@@ -7,9 +7,9 @@ import type { Visual } from "@/components/funnel";
 // client component so the route's server file can feed the same FAQ and plan
 // data into the page's JSON-LD without crossing the client boundary.
 
-export const BOOK_CALL_HREF = "#book";
+export const BOOK_CALL_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const BOOK_CALL_LABEL = "Book a 15-minute call";
-export const FREE_PLAN_HREF = "#book";
+export const FREE_PLAN_HREF = "https://api.fynz.io/widget/booking/GYTunZhDxUCqGsm0O3jd";
 export const FREE_PLAN_LABEL = "Start on the free plan";
 
 export type Plan = {
@@ -37,7 +37,7 @@ export const RESTAURANT_PLANS: Plan[] = [
     price: 97,
     desc: "The operational core: guest list, booking links, direct ordering, missed-call text-back and review requests. Social content isn't included.",
     cta: "Start on Starter",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6ab11d38f426560dbc2f162a",
   },
   {
     key: "growth",
@@ -45,7 +45,7 @@ export const RESTAURANT_PLANS: Plan[] = [
     price: 197,
     desc: "Everything in Starter, plus email campaigns, campaign pages, a social content calendar your team posts from, and documents and contracts.",
     cta: "Start on Growth",
-    href: "#book",
+    href: "https://api.fynz.io/payment-link/6ab11d55f426560dbc2f162c",
     popular: true,
   },
   {
